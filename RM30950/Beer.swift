@@ -9,15 +9,19 @@
 import Foundation
 
 class Beer {
-    var id: Int
-    var name: String
-    var abv: Double
-    var image_url: String
+    var imageURL: String?
+    var name: String?
+    var tagline: String?
+    var alcoholByVolume: Double?
+    var internationalBitternessUnits: Double?
+    var description: String
     
-    init(id: Int, name: String, abv: Double, image_url: String) {
-        self.id = id
+    init(imageURL: String, name: String, tagline: String, abv: Double, ibu: Double, description: String ) {
+        self.imageURL = imageURL
         self.name = name
-        self.abv = abv
-        self.image_url = image_url
+        self.tagline = tagline
+        self.alcoholByVolume = abv
+        self.internationalBitternessUnits = ibu
+        self.description = description
     }
 }

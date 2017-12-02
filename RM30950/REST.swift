@@ -56,14 +56,19 @@ class REST {
                         
                         var beers: [Beer] = []
                         for item in json {
+                            let imageURL = item["image_url"] as? String
+                            let name = item["name"] as? String
+                            let tagline = item["tagline"] as? String ?? ""
+                            let abv = item["abv"] as? Double ?? 0.0
+                            let ibu = item["ibu"] as? Double ?? 0.0
+                            let description = item["description"] as? String ?? ""
                             
-                            let id = item["id"] as! Int
-                            let name = item["name"] as! String
-                            let abv = item["abv"] as! Double
-                            let image_url = item["image_url"] as! String
-                            
-                            let beer = Beer(id: id, name: name, abv: abv, image_url: image_url)
-                            beers.append(beer)
+                            // makes sure that the imgURL and name aren't null
+                            if (imageURL != nil && name != nil) {
+                                let beer = Beer(imageURL: imageURL!, name: name!, tagline: tagline, abv: abv, ibu: ibu, description: description)
+                                
+                                beers.append(beer)
+                            }
                         }
                         onComplete(beers)
                     }

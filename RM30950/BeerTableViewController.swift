@@ -11,26 +11,26 @@ import UIKit
 class BeerTableViewController: UITableViewController {
     
     var dataSource: [Beer] = []
+    lazy var beerList = [Beer]()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadBeers();
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        loadBeers();
     }
 
     func loadBeers() {
-        REST.loadBeers { (beers: [Beer]? ) in
-            if let beers = beers {
-                self.dataSource = beers
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
+        REST.loadBeers { beerListResult in
+            guard let beers = beerListResult else { return }
+            DispatchQueue.main.async {
+                self.beerList = beers
+                self.tableView.reloadData()
                 }
             }
-        }
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,19 +38,19 @@ class BeerTableViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
+        return beerList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! BeerTableViewCell
-
-        let beer = dataSource[indexPath.row]
-        cell.lbName?.text = "rafael"
-        //cell.lbAbv?.text = "Teor Alcoolico: " + beer.abv
+      
+        cell.lbName?.text = beerList[indexPath.row].name
+        let abv = String(format: "%.1f", beerList[indexPath.row].alcoholByVolume ?? 0.0)
+        cell.lbAbv?.text = "Teor Alcoolico: " + abv
        
 
         return cell
