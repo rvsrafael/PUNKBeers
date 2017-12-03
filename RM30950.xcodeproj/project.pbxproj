@@ -11,8 +11,8 @@
 		0594CEE71FCB59D900543C91 /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0594CEE61FCB59D900543C91 /* REST.swift */; };
 		0594CEE91FCB5D7D00543C91 /* BeerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0594CEE81FCB5D7D00543C91 /* BeerTableViewController.swift */; };
 		0594CEED1FCB6A6B00543C91 /* BeerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0594CEEC1FCB6A6B00543C91 /* BeerTableViewCell.swift */; };
+		0594CEEF1FD3766B00543C91 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0594CEEE1FD3766B00543C91 /* BeerViewController.swift */; };
 		05B1CE961FCB233800009ECD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B1CE951FCB233800009ECD /* AppDelegate.swift */; };
-		05B1CE981FCB233800009ECD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B1CE971FCB233800009ECD /* ViewController.swift */; };
 		05B1CE9B1FCB233800009ECD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B1CE991FCB233800009ECD /* Main.storyboard */; };
 		05B1CE9D1FCB233800009ECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B1CE9C1FCB233800009ECD /* Assets.xcassets */; };
 		05B1CEA01FCB233800009ECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B1CE9E1FCB233800009ECD /* LaunchScreen.storyboard */; };
@@ -42,9 +42,9 @@
 		0594CEE61FCB59D900543C91 /* REST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
 		0594CEE81FCB5D7D00543C91 /* BeerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTableViewController.swift; sourceTree = "<group>"; };
 		0594CEEC1FCB6A6B00543C91 /* BeerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTableViewCell.swift; sourceTree = "<group>"; };
+		0594CEEE1FD3766B00543C91 /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
 		05B1CE921FCB233800009ECD /* RM30950.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RM30950.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B1CE951FCB233800009ECD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		05B1CE971FCB233800009ECD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		05B1CE9A1FCB233800009ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05B1CE9C1FCB233800009ECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05B1CE9F1FCB233800009ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				05B1CE951FCB233800009ECD /* AppDelegate.swift */,
-				05B1CE971FCB233800009ECD /* ViewController.swift */,
 				05B1CE991FCB233800009ECD /* Main.storyboard */,
 				05B1CE9C1FCB233800009ECD /* Assets.xcassets */,
 				05B1CE9E1FCB233800009ECD /* LaunchScreen.storyboard */,
@@ -115,6 +114,7 @@
 				0594CEE61FCB59D900543C91 /* REST.swift */,
 				0594CEE81FCB5D7D00543C91 /* BeerTableViewController.swift */,
 				0594CEEC1FCB6A6B00543C91 /* BeerTableViewCell.swift */,
+				0594CEEE1FD3766B00543C91 /* BeerViewController.swift */,
 			);
 			path = RM30950;
 			sourceTree = "<group>";
@@ -271,8 +271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05B1CE981FCB233800009ECD /* ViewController.swift in Sources */,
 				0594CEED1FCB6A6B00543C91 /* BeerTableViewCell.swift in Sources */,
+				0594CEEF1FD3766B00543C91 /* BeerViewController.swift in Sources */,
 				0594CEE51FCB57E600543C91 /* Beer.swift in Sources */,
 				0594CEE91FCB5D7D00543C91 /* BeerTableViewController.swift in Sources */,
 				05B1CE961FCB233800009ECD /* AppDelegate.swift in Sources */,
