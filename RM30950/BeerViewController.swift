@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Kingfisher
+
 
 class BeerViewController: UIViewController {
 
@@ -31,14 +33,14 @@ class BeerViewController: UIViewController {
     func loadBeer() {
         if beer != nil {
             
-            //let url = ImageResource(downloadURL: URL(string: (beer?.imageURL)!)!, cacheKey: beer?.name)
+            let url = ImageResource(downloadURL: URL(string: (beer?.imageURL)!)!, cacheKey: beer?.name)
             let name = beer!.name
             let tagline = beer!.tagline
             let abv = beer!.alcoholByVolume
             let ibu = beer!.internationalBitternessUnits
             let description = beer!.description
             
-            //ivBeer.kf.setImage(with: url)
+            ivBeer.kf.setImage(with: url)
             lbName.text = name
             lbTagline.text = tagline
             lbABV.text = String(format: "%.1f", abv!)

@@ -9,14 +9,4 @@ target 'RM30950' do
 
 pod 'Kingfisher', '~> 4.0'
 
-  target 'RM30950Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'RM30950UITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end

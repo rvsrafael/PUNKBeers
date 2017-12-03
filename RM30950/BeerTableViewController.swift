@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BeerTableViewController: UITableViewController {
     
@@ -38,6 +39,10 @@ class BeerTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 148
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -49,9 +54,13 @@ class BeerTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! BeerTableViewCell
       
+        let url = ImageResource(downloadURL: URL(string: beerList[indexPath.row].imageURL!)!, cacheKey: beerList[indexPath.row].name)
+
         cell.lbName?.text = beerList[indexPath.row].name
         let abv = String(format: "%.1f", beerList[indexPath.row].alcoholByVolume ?? 0.0)
         cell.lbAbv?.text = "Teor Alcoolico: " + abv
+        cell.imgBeer.kf.setImage(with: url)
+
        
 
         return cell
