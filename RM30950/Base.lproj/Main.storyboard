@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,25 +26,43 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sOn-0h-csh">
-                                            <rect key="frame" x="24" y="8" width="96" height="134"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sOn-0h-csh">
+                                            <rect key="frame" x="12" y="19" width="119" height="123"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="123" id="Isr-6N-CiF"/>
+                                                <constraint firstAttribute="width" constant="119" id="buu-tu-7fe"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name beer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slP-Ae-USy">
-                                            <rect key="frame" x="128" y="8" width="224" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name beer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slP-Ae-USy">
+                                            <rect key="frame" x="139" y="19" width="224" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="224" id="WlE-sE-nv5"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Teor Alcoolico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5L-7Q-CLw">
-                                            <rect key="frame" x="128" y="120" width="224" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teor Alcoolico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5L-7Q-CLw">
+                                            <rect key="frame" x="139" y="108" width="224" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="224" id="yF1-pm-gDx"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="U5L-7Q-CLw" secondAttribute="trailing" constant="15" id="5ja-Gs-AKT"/>
+                                        <constraint firstItem="slP-Ae-USy" firstAttribute="leading" secondItem="sOn-0h-csh" secondAttribute="trailing" constant="8" id="CTg-n2-BLj"/>
+                                        <constraint firstItem="sOn-0h-csh" firstAttribute="leading" secondItem="Gsj-OF-C04" secondAttribute="leading" constant="12" id="G0w-9j-6sQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="sOn-0h-csh" secondAttribute="bottom" constant="7.5" id="cyH-dH-ZjJ"/>
+                                        <constraint firstItem="sOn-0h-csh" firstAttribute="top" secondItem="Gsj-OF-C04" secondAttribute="top" constant="19" id="fXj-fF-282"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="slP-Ae-USy" secondAttribute="trailing" constant="15" id="mly-iW-efi"/>
+                                        <constraint firstItem="slP-Ae-USy" firstAttribute="top" secondItem="Gsj-OF-C04" secondAttribute="topMargin" constant="11" id="rph-0E-ej9"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="U5L-7Q-CLw" secondAttribute="bottom" constant="12.5" id="sL4-eR-Ekt"/>
+                                        <constraint firstItem="U5L-7Q-CLw" firstAttribute="leading" secondItem="sOn-0h-csh" secondAttribute="trailing" constant="8" id="xd4-nM-SRh"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="imgBeer" destination="sOn-0h-csh" id="o2K-Ym-d4f"/>
@@ -66,7 +85,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7m-QJ-r6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="1164"/>
+            <point key="canvasLocation" x="180" y="1163.568215892054"/>
         </scene>
         <!--Beer!!!-->
         <scene sceneID="Whe-53-ly0">
